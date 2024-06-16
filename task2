@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f6f6; /* Light grey */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff6f61; /* Coral */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .filter-container {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .filter-options {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .filter-options li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .filter-options li a {
+            color: #333;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product-card {
+            background-color: #fff;
+            width: 300px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .product-info {
+            padding: 10px;
+        }
+
+        .product-info h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .product-info p {
+            color: #666;
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Products</h1>
+    </header>
+    <div class="filter-container">
+        <h2>Filter By:</h2>
+        <ul class="filter-options">
+            <li><a href="#" onclick="showCategory('Fruits')">Fruits</a></li>
+            <li><a href="#" onclick="showCategory('Vegetables')">Vegetables</a></li>
+            <!-- Add more filter options as needed -->
+        </ul>
+    </div>
+    <div class="product-list">
+        <div id="Fruits" style="display:none;">
+            <div class="product-card">
+                <img src="https://static.agcanada.com/wp-content/uploads/sites/5/2018/11/apple_GettyImages186843005_cmyk.jpg" alt="Apple">
+                <div class="product-info">
+                    <h3>Apple</h3>
+                    <p>$1.99 per pound</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://th.bing.com/th/id/OIP.9uL9bdYXO1RW8GErkX9wBwHaE9?rs=1&pid=ImgDetMain" alt="Banana">
+                <div class="product-info">
+                    <h3>Banana</h3>
+                    <p>$0.69 per pound</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://th.bing.com/th/id/OIP.hOr6_I_hlrEyTS_vK4_ccgAAAA?rs=1&pid=ImgDetMain" alt="Orange">
+                <div class="product-info">
+                    <h3>Orange</h3>
+                    <p>$0.89 per pound</p>
+                </div>
+            </div>
+        </div>
+        <div id="Vegetables" style="display:none;">
+            <div class="product-card">
+                <img src="https://th.bing.com/th/id/OIP.JJhRCdcbDVHgd7cCnaz0_gHaEo?rs=1&pid=ImgDetMain" alt="Tomato">
+                <div class="product-info">
+                    <h3>Tomato</h3>
+                    <p>$2.49 per pound</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://th.bing.com/th/id/OIP.aMtCHYZH9_g4Sb8F91u4rQHaFY?rs=1&pid=ImgDetMain" alt="Carrot">
+                <div class="product-info">
+                    <h3>Carrot</h3>
+                    <p>$1.29 per pound</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://th.bing.com/th/id/R.e1066e803ae315f5f189a642c493e683?rik=J7oxLisg%2bsdkUg&riu=http%3a%2f%2fspecialtyproduce.com%2fsppics%2f5113.png&ehk=FUxl7j986p0xVMXu1nZ6MAk0NzvZ49SB907Lbhek%2b40%3d&risl=&pid=ImgRaw&r=0" alt="Spinach">
+                <div class="product-info">
+                    <h3>Spinach</h3>
+                    <p>$2.99 per pound</p>
+                </div>
+            </div>
+        </div>
+        <!-- Add more product cards as needed -->
+    </div>
+    <footer>
+        <p>&copy; 2024 Your E-commerce Website</p>
+    </footer>
+
+    <script>
+        function showCategory(category) {
+            var categories = document.querySelectorAll('.product-list > div');
+            categories.forEach(function(cat) {
+                cat.style.display = 'none';
+            });
+            document.getElementById(category).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
